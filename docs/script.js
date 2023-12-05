@@ -18,7 +18,7 @@ const animate = async (dataManager) => {
     const packageType = getCurrentPackageType();
     await load(dataManager, region);
     const data = dataManager.fetchData;
-    document.getElementById("lastUpdate").innerHTML = data.metadata.generatedAt;
+    document.getElementById("lastUpdate").innerHTML = data.region.metadata.generatedAt;
     const promiseArray = [];
     let i = 0;
     data.region.runtimeData.sort((a, b) => a.acd - b.acd);
