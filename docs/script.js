@@ -18,11 +18,11 @@ const animate = async (dataManager) => {
     const packageType = getCurrentPackageType();
     await load(dataManager, region);
     const data = dataManager.fetchData;
-    document.getElementById("lastUpdate").innerHTML = data.region.metadata.generatedAt;
+    document.getElementById("lastUpdate").innerHTML = data[region].metadata.generatedAt;
     const promiseArray = [];
     let i = 0;
-    data.region.runtimeData.sort((a, b) => a.acd - b.acd);
-    const filteredData = data.region.runtimeData.filter(
+    data[region].runtimeData.sort((a, b) => a.acd - b.acd);
+    const filteredData = data[region].runtimeData.filter(
       (r) => r.m == memorySize && r.a === architecture && r.p === packageType
     );
     for (runtime of filteredData) {
