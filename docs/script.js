@@ -4,7 +4,7 @@ const dataManager = {
 
 const load = async (dataManager, region) => {
   const request = await fetch(
-        "https://raw.githubusercontent.com/sebnapo/lambda-perf/main/data/last.json?0.6938782927600649"
+        "https://raw.githubusercontent.com/sebnapo/lambda-perf/main/data/last.json?0.3766308933839828"
   );
   const json = await request.json();
   dataManager.fetchData = json;
